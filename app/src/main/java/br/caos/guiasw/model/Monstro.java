@@ -21,10 +21,13 @@ public class Monstro {
     private Bitmap imgPequena;
     private Bitmap imgGrande;
 
+    private Integer estrela;
+    private String elemento;
+
     public Monstro() {
     }
 
-    public Monstro(Integer id, String nome, Integer vida, Integer ataque, Integer defesa, Integer velocidade, Integer chanceCritico, Integer danoCritico, Integer resistencia, Integer precisao) {
+    public Monstro(Integer id, String nome, Integer vida, Integer ataque, Integer defesa, Integer velocidade, Integer chanceCritico, Integer danoCritico, Integer resistencia, Integer precisao, String elemento, Integer estrela) {
         this.id = id;
         this.nome = nome;
         this.vida = vida;
@@ -35,6 +38,8 @@ public class Monstro {
         this.danoCritico = danoCritico;
         this.resistencia = resistencia;
         this.precisao = precisao;
+        this.elemento = elemento;
+        this.estrela = estrela;
     }
 
     public Integer getId() {
@@ -131,5 +136,21 @@ public class Monstro {
 
     public void setImgGrande(Bitmap imgGrande) {
         this.imgGrande = imgGrande;
+    }
+
+    public Integer getEstrela() {
+        return estrela;
+    }
+
+    public void setEstrela(Integer estrela) {
+        this.estrela = estrela;
+    }
+
+    public String getElemento() {
+        return elemento;
+    }
+
+    public void setElemento(String elemento) {
+        this.elemento = elemento;
     }
 }

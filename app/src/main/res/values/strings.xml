@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">GuiaSW</string>
     <string name="Menu">Menu</string>
+
+    <!-- LB -->
+    <string name="lbHP">HP:</string>
+    <string name="lbATK">ATK:</string>
+    <string name="lbDEF">DEF:</string>
+    <string name="lbVEL">VEL:</string>
+    <string name="lbCRIRate">CRI Rate:</string>
+    <string name="lbCRIDmg">CRI Dmg:</string>
+    <string name="lbRES">RES:</string>
+    <string name="lbPRE">PRE:</string>
+
+
 </resources>

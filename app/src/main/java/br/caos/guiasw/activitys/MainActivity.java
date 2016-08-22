@@ -17,6 +17,7 @@ import java.util.List;
 
 import br.caos.guiasw.R;
 import br.caos.guiasw.adapters.MenuAdapter;
+import br.caos.guiasw.fragments.FragmentDetalheMonstro;
 import br.caos.guiasw.fragments.FragmentInicial;
 import br.caos.guiasw.fragments.FragmentListaMonstros;
 import br.caos.guiasw.interfaces.FragPrincInterface;
@@ -130,7 +131,12 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
 
             case 2:
                 FragmentListaMonstros fragmentListaMonstros = new FragmentListaMonstros();
+                fragmentListaMonstros.setFragPrincInterface(this);
                 UtilFragments.preparaFragment(fragmentListaMonstros, "ListaMonstros", fm, R.id.llFragments);
+                break;
+            case 6:
+                FragmentDetalheMonstro fragmentDetalheMonstro = new FragmentDetalheMonstro();
+                UtilFragments.preparaFragment(fragmentDetalheMonstro, "DetalheMonstro", fm, R.id.llFragments);
                 break;
         }
 
