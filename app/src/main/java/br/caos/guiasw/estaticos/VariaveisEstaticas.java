@@ -8,6 +8,7 @@ import br.caos.guiasw.model.Monstro;
 public class VariaveisEstaticas {
 
     private static Monstro monstroEstatico;
+    private static int proximaTela;
 
     public static Monstro getMonstroEstatico() {
         return monstroEstatico;
@@ -15,5 +16,13 @@ public class VariaveisEstaticas {
 
     public static void setMonstroEstatico(Monstro monstroEstatico) {
         VariaveisEstaticas.monstroEstatico = monstroEstatico;
+    }
+
+    public static int getProximaTela() {
+        return proximaTela;
+    }
+
+    public static void setProximaTela(int proximaTela) {
+        VariaveisEstaticas.proximaTela = proximaTela;
     }
 }

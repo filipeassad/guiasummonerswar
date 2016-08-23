@@ -2,6 +2,11 @@
     <string name="app_name">GuiaSW</string>
     <string name="Menu">Menu</string>
 
+    <string name="FarmsdeMana">Farms de Mana</string>
+    <string name="FarmsdeRunas">Farms de Runas</string>
+    <string name="FarmsdeEssencias">Farms de Essências</string>
+    <string name="FarmsdeExp">Farms de EXP</string>
+
     <!-- LB -->
     <string name="lbHP">HP:</string>
     <string name="lbATK">ATK:</string>

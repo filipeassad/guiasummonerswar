@@ -1,5 +1,6 @@
 package br.caos.guiasw.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -54,6 +55,7 @@ public class FragmentListaMonstros extends Fragment {
 
         MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
         lvMonstros.setAdapter(monstroAdapter);
+        llEstrela.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
         acoes();
 
@@ -68,6 +70,8 @@ public class FragmentListaMonstros extends Fragment {
                 List<Monstro> listMonstros = monstroDataSource.getMonstrosByEstrela(1);
                 MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
                 lvMonstros.setAdapter(monstroAdapter);
+                zeraBGLL();
+                llEstrela.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -77,6 +81,8 @@ public class FragmentListaMonstros extends Fragment {
                 List<Monstro> listMonstros = monstroDataSource.getMonstrosByEstrela(2);
                 MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
                 lvMonstros.setAdapter(monstroAdapter);
+                zeraBGLL();
+                llEstrela2.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -86,6 +92,8 @@ public class FragmentListaMonstros extends Fragment {
                 List<Monstro> listMonstros = monstroDataSource.getMonstrosByEstrela(3);
                 MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
                 lvMonstros.setAdapter(monstroAdapter);
+                zeraBGLL();
+                llEstrela3.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -95,6 +103,8 @@ public class FragmentListaMonstros extends Fragment {
                 List<Monstro> listMonstros = monstroDataSource.getMonstrosByEstrela(4);
                 MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
                 lvMonstros.setAdapter(monstroAdapter);
+                zeraBGLL();
+                llEstrela4.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -104,6 +114,8 @@ public class FragmentListaMonstros extends Fragment {
                 List<Monstro> listMonstros = monstroDataSource.getMonstrosByEstrela(5);
                 MonstroAdapter monstroAdapter = new MonstroAdapter(getContext(), R.layout.adapter_list_monstros,listMonstros);
                 lvMonstros.setAdapter(monstroAdapter);
+                zeraBGLL();
+                llEstrela5.setBackgroundColor(Color.parseColor("#FFFFFF"));
             }
         });
 
@@ -111,12 +123,20 @@ public class FragmentListaMonstros extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 VariaveisEstaticas.setMonstroEstatico((Monstro) lvMonstros.getItemAtPosition(position));
-                fragPrincInterface.changeScreen(6);
+                fragPrincInterface.changeScreen(VariaveisEstaticas.getProximaTela());
             }
         });
     }
 
     public void setFragPrincInterface(FragPrincInterface fragPrincInterface) {
         this.fragPrincInterface = fragPrincInterface;
+    }
+
+    private void zeraBGLL(){
+        llEstrela.setBackgroundColor(Color.parseColor("#565656"));
+        llEstrela2.setBackgroundColor(Color.parseColor("#565656"));
+        llEstrela3.setBackgroundColor(Color.parseColor("#565656"));
+        llEstrela4.setBackgroundColor(Color.parseColor("#565656"));
+        llEstrela5.setBackgroundColor(Color.parseColor("#565656"));
     }
 }

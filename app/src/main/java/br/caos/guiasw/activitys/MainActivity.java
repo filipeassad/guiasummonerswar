@@ -17,9 +17,14 @@ import java.util.List;
 
 import br.caos.guiasw.R;
 import br.caos.guiasw.adapters.MenuAdapter;
+import br.caos.guiasw.estaticos.VariaveisEstaticas;
 import br.caos.guiasw.fragments.FragmentDetalheMonstro;
+import br.caos.guiasw.fragments.FragmentFarms;
 import br.caos.guiasw.fragments.FragmentInicial;
 import br.caos.guiasw.fragments.FragmentListaMonstros;
+import br.caos.guiasw.fragments.FragmentSimuladorRunas;
+import br.caos.guiasw.fragments.FragmentTimesBatalhas;
+import br.caos.guiasw.fragments.FragmentTimesDG;
 import br.caos.guiasw.interfaces.FragPrincInterface;
 import br.caos.guiasw.utilitarios.Animacoes;
 import br.caos.guiasw.utilitarios.UtilFragments;
@@ -102,17 +107,19 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(lvMenu.getItemAtPosition(position).equals("Monstros")){
+                    VariaveisEstaticas.setProximaTela(7);
                     changeScreen(2);
                 }else if(lvMenu.getItemAtPosition(position).equals("Farms")){
                     changeScreen(3);
                 }else if(lvMenu.getItemAtPosition(position).equals("Time DG")){
-                    changeScreen(3);
+                    changeScreen(4);
                 }else if(lvMenu.getItemAtPosition(position).equals("Time Batalha")){
-                    changeScreen(3);
+                    changeScreen(5);
                 }else if(lvMenu.getItemAtPosition(position).equals("Montagem de Runas")){
-                    changeScreen(3);
+                    VariaveisEstaticas.setProximaTela(6);
+                    changeScreen(2);
                 }else{
-                    changeScreen(1);
+                    changeScreen(2);
                 }
             }
 
@@ -134,7 +141,28 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
                 fragmentListaMonstros.setFragPrincInterface(this);
                 UtilFragments.preparaFragment(fragmentListaMonstros, "ListaMonstros", fm, R.id.llFragments);
                 break;
+
+            case 3:
+                FragmentFarms fragmentFarms = new FragmentFarms();
+                UtilFragments.preparaFragment(fragmentFarms,"Farms", fm, R.id.llFragments);
+                break;
+
+            case 4:
+                FragmentTimesDG fragmentTimesDG = new FragmentTimesDG();
+                UtilFragments.preparaFragment(fragmentTimesDG, "Times DG", fm, R.id.llFragments);
+                break;
+
+            case 5:
+                FragmentTimesBatalhas fragmentTimesBatalhas = new FragmentTimesBatalhas();
+                UtilFragments.preparaFragment(fragmentTimesBatalhas, "Times Batalha", fm, R.id.llFragments);
+                break;
+
             case 6:
+                FragmentSimuladorRunas fragmentSimuladorRunas = new FragmentSimuladorRunas();
+                UtilFragments.preparaFragment(fragmentSimuladorRunas, "Simulador Runa", fm, R.id.llFragments);
+                break;
+
+            case 7:
                 FragmentDetalheMonstro fragmentDetalheMonstro = new FragmentDetalheMonstro();
                 UtilFragments.preparaFragment(fragmentDetalheMonstro, "DetalheMonstro", fm, R.id.llFragments);
                 break;
@@ -166,4 +194,13 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
         llMenuBar.addView(menuLayout);
 
     }
+
+    /*@Override
+    public void onBackPressed() {
+        if(lvMenu.getVisibility() == View.VISIBLE){
+            Animacoes.animaSaidaMenu(llMenu, llOpacidade);
+        }else{
+            super.onBackPressed();
+        }
+    }*/
 }
