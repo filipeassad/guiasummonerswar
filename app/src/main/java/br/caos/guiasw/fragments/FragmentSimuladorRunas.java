@@ -1,5 +1,6 @@
 package br.caos.guiasw.fragments;
 
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,13 +9,24 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 import br.caos.guiasw.R;
+import br.caos.guiasw.adapters.RunaAdapter;
 import br.caos.guiasw.estaticos.VariaveisEstaticas;
 import br.caos.guiasw.model.Monstro;
+import br.caos.guiasw.model.Runa;
+import br.caos.guiasw.model.RunaBoard;
+import br.caos.guiasw.persistencia.RunaBoardDataSource;
+import br.caos.guiasw.persistencia.RunaDataSource;
 
 /**
  * Created by 0118431 on 22/08/2016.
@@ -47,6 +59,9 @@ public class FragmentSimuladorRunas extends Fragment {
     private ImageView ivRuna4;
     private ImageView ivRuna5;
     private ImageView ivRuna6;
+
+    private Runa runaSelecionada;
+    private RunaBoard runaBoardSelecionada;
 
 
     @Override
@@ -119,8 +134,8 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 1", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna1, 1);
+                    return false;
                 }
             }
         });
@@ -134,8 +149,8 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 2", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna2, 2);
+                    return false;
                 }
             }
         });
@@ -149,8 +164,8 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 3", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna3, 3);
+                    return false;
                 }
             }
         });
@@ -164,8 +179,8 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 4", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna4, 4);
+                    return false;
                 }
             }
         });
@@ -179,8 +194,8 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 5", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna5, 5);
+                    return false;
                 }
             }
         });
@@ -194,11 +209,74 @@ public class FragmentSimuladorRunas extends Fragment {
                 if (color == Color.TRANSPARENT)
                     return false;
                 else {
-                    Toast.makeText(getContext(),"Runa 6", Toast.LENGTH_SHORT).show();
-                    return true;
+                    criaDialog(ivRuna6, 6);
+                    return false;
                 }
             }
         });
+
+    }
+
+    private void criaDialog(final View view, final int numero){
+
+        final Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_runa);
+
+        ImageView ivSair            = (ImageView) dialog.findViewById(R.id.ivSair);
+        final Spinner spTipoRuna    = (Spinner) dialog.findViewById(R.id.spTipoRuna);
+        Button btnSelecionar        = (Button) dialog.findViewById(R.id.btnSelecionar);
+
+        RunaDataSource runaDataSource = new RunaDataSource(getContext());
+
+        List<Runa> listRuna =  runaDataSource.getAllRunas();
+
+        RunaAdapter runaAdapter = new RunaAdapter(getContext(), R.layout.adapter_runa, R.id.tvNome,listRuna);
+        spTipoRuna.setAdapter(runaAdapter);
+
+        runaSelecionada = (Runa) spTipoRuna.getItemAtPosition(0);
+
+        ivSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        btnSelecionar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(runaSelecionada != null){
+                    changeImagem(view, numero);
+                }
+                dialog.dismiss();
+            }
+        });
+
+        spTipoRuna.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                runaSelecionada = (Runa) spTipoRuna.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        dialog.show();
+
+    }
+
+    public void changeImagem(View view, int numero){
+
+        RunaBoardDataSource runaBoardDataSource = new RunaBoardDataSource(getContext());
+        RunaBoard runaBoard = runaBoardDataSource.getRuBoByNomeNum(runaSelecionada.getNome().trim(), numero);
+
+        if(runaBoard != null){
+            ((ImageView) view).setImageBitmap(runaBoard.getImagem());
+        }
 
     }
 }

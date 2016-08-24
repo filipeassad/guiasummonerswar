@@ -9,7 +9,9 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginLeft="10dp"
-        android:layout_gravity="center|left"/>
+        android:layout_gravity="center|left"
+        android:padding="5dp"
+        android:background="@drawable/shape_detalhe_monstro"/>
 
     <TextView
         android:id="@+id/tvTitulo"

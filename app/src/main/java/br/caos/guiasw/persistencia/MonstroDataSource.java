@@ -58,6 +58,9 @@ public class MonstroDataSource {
             }
 
         }
+
+        db.close();
+        cursor.close();
         helper.close();
         return listMonstro;
     }

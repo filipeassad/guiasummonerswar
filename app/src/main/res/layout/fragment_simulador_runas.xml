@@ -32,27 +32,30 @@
 
                 <ImageView
                     android:id="@+id/ivRuna1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa1"
+                    android:scaleType="fitXY"
                     android:layout_marginLeft="63dp"
                     android:layout_marginTop="10dp"
                     android:layout_alignLeft="@+id/boardRuna"/>
 
                 <ImageView
                     android:id="@+id/ivRuna2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa2"
+                    android:scaleType="fitXY"
                     android:layout_alignRight="@+id/boardRuna"
                     android:layout_marginTop="45dp"
                     android:layout_marginRight="11dp"/>
 
                 <ImageView
                     android:id="@+id/ivRuna3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa3"
+                    android:scaleType="fitXY"
                     android:layout_alignRight="@+id/boardRuna"
                     android:layout_alignBottom="@id/boardRuna"
                     android:layout_marginBottom="44dp"
@@ -60,27 +63,30 @@
 
                 <ImageView
                     android:id="@+id/ivRuna4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa4"
+                    android:scaleType="fitXY"
                     android:layout_alignBottom="@id/boardRuna"
                     android:layout_marginLeft="65dp"
                     android:layout_marginBottom="6dp"/>
 
                 <ImageView
                     android:id="@+id/ivRuna5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa5"
+                    android:scaleType="fitXY"
                     android:layout_alignBottom="@id/boardRuna"
                     android:layout_marginBottom="43dp"
                     android:layout_marginLeft="5dp"/>
 
                 <ImageView
                     android:id="@+id/ivRuna6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="106dp"
                     android:src="@drawable/runa6"
+                    android:scaleType="fitXY"
                     android:layout_marginTop="44dp"
                     android:layout_marginLeft="8dp"/>
 

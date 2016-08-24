@@ -41,7 +41,7 @@ public class MenuAdapter extends ArrayAdapter<String>{
         textView.setText(getItem(position));
 
         if(getItem(position).equals("Monstros")){
-            imageView.setImageResource(R.drawable.legendaryl);
+            imageView.setImageResource(R.drawable.icomenunav);
         }else if(getItem(position).equals("Farms")){
             imageView.setImageResource(R.drawable.expbooster);
         }else if(getItem(position).equals("Time DG")){

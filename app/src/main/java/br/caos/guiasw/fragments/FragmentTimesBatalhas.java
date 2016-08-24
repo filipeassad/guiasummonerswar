@@ -38,10 +38,10 @@ public class FragmentTimesBatalhas extends Fragment {
     private void carregaLista(){
 
         lista = new ArrayList<>();
-        lista.add(new ItemList("Times de Ataque Arena", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Times de Ataque GVG", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Times de Defesa Arena", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Times de Defesa GVG", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Times de Ataque Arena", BitmapFactory.decodeResource(this.getResources(), R.drawable.arena)));
+        lista.add(new ItemList("Times de Defesa Arena", BitmapFactory.decodeResource(this.getResources(), R.drawable.arena)));
+        lista.add(new ItemList("Times de Ataque GVG", BitmapFactory.decodeResource(this.getResources(), R.drawable.guilda)));
+        lista.add(new ItemList("Times de Defesa GVG", BitmapFactory.decodeResource(this.getResources(), R.drawable.guilda)));
 
     }
 

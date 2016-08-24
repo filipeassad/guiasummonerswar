@@ -42,28 +42,28 @@ public class FragmentTimesDG extends Fragment {
 
         lista = new ArrayList<>();
 
-        lista.add(new ItemList("Time Giant B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Giant B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Giant B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Giant B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Time Giant B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.giantb7)));
+        lista.add(new ItemList("Time Giant B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.giantb8)));
+        lista.add(new ItemList("Time Giant B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.giantb9)));
+        lista.add(new ItemList("Time Giant B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.giantb10)));
 
-        lista.add(new ItemList("Time Dragon B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Dragon B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Dragon B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Dragon B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Time Dragon B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.dragonb7)));
+        lista.add(new ItemList("Time Dragon B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.dragonb8)));
+        lista.add(new ItemList("Time Dragon B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.dragonb9)));
+        lista.add(new ItemList("Time Dragon B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.dragonb10)));
 
-        lista.add(new ItemList("Time Necro B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Necro B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Necro B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Necro B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Time Necro B7", BitmapFactory.decodeResource(this.getResources(), R.drawable.lichking)));
+        lista.add(new ItemList("Time Necro B8", BitmapFactory.decodeResource(this.getResources(), R.drawable.lichking)));
+        lista.add(new ItemList("Time Necro B9", BitmapFactory.decodeResource(this.getResources(), R.drawable.lichking)));
+        lista.add(new ItemList("Time Necro B10", BitmapFactory.decodeResource(this.getResources(), R.drawable.lichking)));
 
-        lista.add(new ItemList("Time Hall of Light", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Hall of Dark", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Hall of Fire", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Hall of Water", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Time Hall of Wind", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Time Hall of Light", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardianlight)));
+        lista.add(new ItemList("Time Hall of Dark", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardiandark)));
+        lista.add(new ItemList("Time Hall of Fire", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardianfire)));
+        lista.add(new ItemList("Time Hall of Water", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardianwater)));
+        lista.add(new ItemList("Time Hall of Wind", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardianwind)));
 
-        lista.add(new ItemList("Time Hall of Magic", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Time Hall of Magic", BitmapFactory.decodeResource(this.getResources(), R.drawable.guardianmagic)));
 
     }
 

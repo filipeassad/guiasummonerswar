@@ -21,4 +21,13 @@
         android:layout_gravity="center|left"
         android:layout_marginLeft="105dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#303030"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"></LinearLayout>
+
 </FrameLayout>
+

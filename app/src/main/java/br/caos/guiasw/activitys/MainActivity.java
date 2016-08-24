@@ -74,9 +74,12 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
             public void onClick(View v) {
                 if(llMenu.getVisibility() == View.VISIBLE){
                     Animacoes.animaSaidaMenu(llMenu, llOpacidade);
+                    btnNavMenu.setImageResource(R.drawable.bars);
+
                 }else{
                     llMenu.setVisibility(View.VISIBLE);
                     Animacoes.animaEntradaMenu(llMenu, llOpacidade);
+                    btnNavMenu.setImageResource(R.drawable.icomenunav);
                 }
             }
         });
@@ -85,6 +88,7 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
             @Override
             public void onClick(View v) {
                 Animacoes.animaSaidaMenu(llMenu, llOpacidade);
+                btnNavMenu.setImageResource(R.drawable.bars);
             }
         });
 
@@ -92,6 +96,7 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
             @Override
             public void onClick(View v) {
                 Animacoes.animaSaidaMenu(llMenu, llOpacidade);
+                btnNavMenu.setImageResource(R.drawable.bars);
             }
         });
 
@@ -169,6 +174,7 @@ public class MainActivity extends FragmentActivity implements FragPrincInterface
         }
 
         Animacoes.animaSaidaMenu(llMenu, llOpacidade);
+        btnNavMenu.setImageResource(R.drawable.bars);
 
     }
 

@@ -38,10 +38,10 @@ public class FragmentFarms extends Fragment {
     private void carregalista(){
         lista = new ArrayList<>();
 
-        lista.add(new ItemList("Farms de Mana", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Farms de Runas", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Farms de Essências", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
-        lista.add(new ItemList("Farms de EXP", BitmapFactory.decodeResource(this.getResources(), R.drawable.legendaryl)));
+        lista.add(new ItemList("Farms de Mana", BitmapFactory.decodeResource(this.getResources(), R.drawable.icomana)));
+        lista.add(new ItemList("Farms de Runas", BitmapFactory.decodeResource(this.getResources(), R.drawable.despiarico)));
+        lista.add(new ItemList("Farms de Essências", BitmapFactory.decodeResource(this.getResources(), R.drawable.high_water_essence)));
+        lista.add(new ItemList("Farms de EXP", BitmapFactory.decodeResource(this.getResources(), R.drawable.expbooster)));
     }
 
     private void carregaListView(){
